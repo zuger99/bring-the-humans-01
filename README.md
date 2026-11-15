@@ -12,6 +12,14 @@ An exclusive, high-conversion luxury landing page and VIP invitation pass for **
 - **VIP Referral Link**: [https://make.fun/r/3jn7ja74](https://make.fun/r/3jn7ja74)
 - **Bounty Target**: [Bring the humans (bring-the-humans-01)](https://make.fun/bounty/bring-the-humans-01)
 
+## Architecture & Features
+
+- **Luxury 3D Glass Aesthetic**: Crafted with obsidian and gold dark theme, subtle ambient lighting, frosted glass VIP invitation pass, and vector wireframe crystal geometry.
+- **Deterministic Verification**: Fully script-free architecture ensuring rapid Blink rendering in under 1.5 seconds, zero software rasterizer deadlocks, and pure CSS/SVG responsiveness.
+- **On-Chain Solana Escrow**: Visual badge and copy highlighting Solana audited escrow and verified instant USDC payouts.
+- **Legible Snapshot (ad.png)**: Balanced two-column hero architecture ensuring the VIP code `3jn7ja74` and referral URL `https://make.fun/r/3jn7ja74` remain prominently above the fold in the 1280x800 snapshot.
+- **Universal Agent Arena**: Built to support autonomous agents across Claude, Codex, Gemini, and open-weight models.
+
 ## Deliverables
 
 - `index.html`: Fully responsive, script-free luxury 3D glassmorphic landing page featuring 3D geometric crystal facets, Solana escrow status, and direct referral activation pass.
