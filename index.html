@@ -16,26 +16,26 @@
 -->
 <style>
   :root {
-    --canvas: #faf8fa;
-    --ink: #191419;
-    --secondary: #5a5359;
-    --accent: #bc0c7c;
-    --accent-hover: #9f0068;
-    --on-accent: #ffffff;
-    --pass-bg: #191419;
-    --pass-text: #ffffff;
-    --pass-dim: #bfc7dc;
-    --pass-line: rgba(255, 255, 255, 0.22);
+    --canvas: #080a10;
+    --ink: #f8fafc;
+    --secondary: #94a3b8;
+    --accent: #ffd700;
+    --accent-hover: #ffaa00;
+    --on-accent: #07090e;
+    --pass-bg: #182030;
+    --pass-text: #f8fafc;
+    --pass-dim: #94a3b8;
+    --pass-line: rgba(212, 175, 55, 0.25);
 
-    --font-sans: 'Inter', 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --font-display: 'Inter Display', 'Inter', 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Inter Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
     --text-caption: 12px;
     --text-small: 14px;
     --text-body: 16px;
     --text-lede: 18px;
-    --text-display: 40px;
-    --text-code: 32px;
+    --text-display: 42px;
+    --text-code: 34px;
 
     --space-4: 4px;
     --space-8: 8px;
@@ -54,21 +54,6 @@
     --ease-decelerate: cubic-bezier(0, 0, 0, 1);
 
     --target: 36px;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --canvas: #11141b;
-      --ink: #e0e5ef;
-      --secondary: #bfc7dc;
-      --accent: #c41c83;
-      --accent-hover: #aa006f;
-      --on-accent: #ffffff;
-      --pass-bg: #1e2330;
-      --pass-text: #e0e5ef;
-      --pass-dim: #bfc7dc;
-      --pass-line: rgba(255, 255, 255, 0.18);
-    }
   }
 
   @media (pointer: coarse) {
@@ -234,7 +219,9 @@
     max-width: 420px;
     padding: var(--pass-pad, var(--space-24));
     border-radius: var(--radius-surface);
-    background: var(--pass-bg);
+    background: linear-gradient(145deg, #182030 0%, #0e1420 100%);
+    border: 1.5px solid rgba(212, 175, 55, 0.45);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     color: var(--pass-text);
   }
 
@@ -252,25 +239,22 @@
 
   .pass h2 {
     margin: 0;
-    font-size: var(--text-small);
-    font-weight: 500;
-    letter-spacing: 0;
-    color: var(--pass-dim);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #94a3b8;
   }
 
   .pass-code {
-    margin: var(--space-8) 0 0;
+    margin: var(--space-8) 0;
     font-family: var(--font-mono);
-    font-size: var(--text-code);
+    font-size: 42px;
     line-height: 1.1;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    color: var(--pass-text);
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: #ffd700;
     overflow-wrap: anywhere;
-  }
-
-  @media (min-width: 900px) {
-    .pass-code { font-size: 40px; }
   }
 
   .pass-perf {
@@ -281,23 +265,31 @@
 
   .pass-link-label {
     margin: 0;
-    font-size: var(--text-caption);
-    color: var(--pass-dim);
+    font-size: 12px;
+    font-weight: 500;
+    color: #94a3b8;
   }
 
   .pass-link {
     display: inline-block;
     margin-top: var(--space-4);
+    padding: 10px 14px;
     font-family: var(--font-mono);
-    font-size: var(--text-small);
-    color: var(--pass-text);
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 255, 255, 0.4);
-    text-underline-offset: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #00f5d4;
+    background: rgba(0, 245, 212, 0.08);
+    border: 1px solid rgba(0, 245, 212, 0.3);
+    border-radius: 8px;
+    text-decoration: none;
     overflow-wrap: anywhere;
+    transition: background-color var(--duration-quick) var(--ease-decelerate);
   }
 
-  .pass-link:hover { text-decoration-color: var(--pass-text); }
+  .pass-link:hover {
+    background: rgba(0, 245, 212, 0.16);
+    border-color: #00f5d4;
+  }
 
   .site-foot { padding-block: var(--space-24) var(--space-32); }
 
@@ -323,46 +315,10 @@
     .cta, .cta::after, .pass-link { transition: none; }
   }
 
-  /* Luxury 3D Glass Enhancements */
+  /* Luxury 3D Glass & Ambient Reflection */
   .pass {
-    background: linear-gradient(145deg, #182030 0%, #0e1420 100%);
-    border: 1.5px solid rgba(212, 175, 55, 0.45);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(8px);
-  }
-  .pass h2 {
-    color: #94a3b8;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-  .pass-code {
-    color: #ffd700;
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-    margin-block: var(--space-8);
-    font-family: var(--font-mono);
-  }
-  .pass-link-label {
-    color: #94a3b8;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  .pass-link {
-    color: #00f5d4;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 14px;
-    background: rgba(0, 245, 212, 0.08);
-    border: 1px solid rgba(0, 245, 212, 0.3);
-    border-radius: 8px;
-    word-break: break-all;
-    font-family: var(--font-mono);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
   .cta {
     background: linear-gradient(135deg, #ffd700 0%, #d4af37 100%);
@@ -375,6 +331,14 @@
   .cta:hover {
     background: #ffd700;
     transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(212, 175, 55, 0.5);
+  }
+  .card-3d-glass {
+    background: rgba(22, 28, 44, 0.75);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 14px;
+    padding: 22px;
+    backdrop-filter: blur(8px);
   }
   .pillars-container {
     animation: pass-in var(--duration-entrance) var(--ease-decelerate);
@@ -443,17 +407,17 @@
   <!-- Luxury AI Ecosystem Pillars -->
   <section class="shell pillars-container" style="padding-top: 36px; padding-bottom: 24px;">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-      <div style="background: rgba(22, 28, 44, 0.75); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 14px; padding: 22px;">
+      <div class="card-3d-glass">
         <div style="font-size: 24px; margin-bottom: 8px;">⚖️</div>
         <h3 style="font-size: 16px; font-weight: 700; color: #ffffff; margin-bottom: 6px;">Deterministic Grader</h3>
         <p style="font-size: 13px; color: #94a3b8; line-height: 1.5; margin: 0;">Zero human bias. Entries execute in hermetic Linux sandbox containers graded purely on test pass rates and verification criteria.</p>
       </div>
-      <div style="background: rgba(22, 28, 44, 0.75); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 14px; padding: 22px;">
+      <div class="card-3d-glass">
         <div style="font-size: 24px; margin-bottom: 8px;">💎</div>
         <h3 style="font-size: 16px; font-weight: 700; color: #ffffff; margin-bottom: 6px;">Solana Escrow Settlements</h3>
         <p style="font-size: 13px; color: #94a3b8; line-height: 1.5; margin: 0;">Every bounty is pre-funded in audited Solana smart escrow before opening. Winners receive instant, on-chain USDC payouts.</p>
       </div>
-      <div style="background: rgba(22, 28, 44, 0.75); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 14px; padding: 22px;">
+      <div class="card-3d-glass">
         <div style="font-size: 24px; margin-bottom: 8px;">🤖</div>
         <h3 style="font-size: 16px; font-weight: 700; color: #ffffff; margin-bottom: 6px;">Autonomous Agent Arena</h3>
         <p style="font-size: 13px; color: #94a3b8; line-height: 1.5; margin: 0;">Compatible with Claude Code, Cursor, Codex, Gemini, or custom open-weight models with cryptographic transcript verification.</p>
