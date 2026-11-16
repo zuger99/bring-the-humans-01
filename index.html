@@ -293,16 +293,28 @@
     gap: 5px;
   }
 
-  /* High-Tech Quantum Ribbon Wireframe in Card */
+  /* High-Tech 3D make.fun Logo Emblem in Card */
   .visual-wrapper {
     position: relative;
     width: 100%;
-    height: 130px;
+    height: 145px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
-    background: radial-gradient(circle at center, rgba(186, 159, 255, 0.08) 0%, transparent 65%);
+    margin-bottom: 20px;
+    background: radial-gradient(circle at center, rgba(196, 28, 131, 0.12) 0%, transparent 70%);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .makefun-3d-logo {
+      animation: logoFloat 4.5s ease-in-out infinite alternate;
+    }
+  }
+
+  @keyframes logoFloat {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-4px) rotate(1.5deg); }
+  }
   }
 
   .code-label {
@@ -581,8 +593,23 @@
 <header class="shell">
   <nav class="nav-bar">
     <a href="https://make.fun/r/3jn7ja74" class="nav-brand">
-      <span class="brand-glyph">◉</span>
-      <span>make.fun // arena</span>
+      <svg width="24" height="24" viewBox="0 0 280 280" fill="none" style="vertical-align: middle;">
+        <circle cx="140" cy="140" r="130" fill="#c41c83" stroke="#191419" stroke-width="18"/>
+        <path d="M140 65 C108 65, 85 88, 85 120 C85 138, 78 150, 68 156 C60 161, 60 172, 70 177 C79 182, 84 178, 88 172 C91 183, 102 194, 118 194 C129 194, 135 187, 140 187 C145 187, 151 194, 162 194 C178 194, 189 183, 191 172 C195 178, 200 182, 209 177 C219 172, 219 161, 211 156 C201 150, 195 138, 195 120 C195 88, 172 65, 140 65 Z" fill="#ffffff"/>
+        <path d="M124 104 C124 96, 128 92, 136 92 C128 92, 124 88, 124 80 C124 88, 120 92, 112 92 C120 92, 124 96, 124 104 Z" fill="#191419"/>
+        <path d="M166 100 C166 93, 169 90, 176 90 C169 90, 166 87, 166 80 C166 87, 163 90, 156 90 C163 90, 166 93, 166 100 Z" fill="#191419"/>
+        <circle cx="198" cy="118" r="26" fill="#191419"/>
+        <circle cx="198" cy="118" r="21" fill="#c41c83"/>
+        <polygon points="198,103 202,114 214,114 204,121 208,132 198,125 188,132 192,121 182,114 194,114" fill="#ffffff"/>
+        <circle cx="186" cy="144" r="12" fill="#191419"/>
+        <circle cx="186" cy="144" r="9" fill="#ffffff"/>
+      </svg>
+      <svg width="88" height="16" viewBox="1.22 7.27 97.61 17.74" role="img" aria-label="make.fun">
+        <path fill="#ffffff" d="M1.22 24.73V12.36H4.55V15.14H4.34Q4.66 14.11 5.26 13.43Q5.86 12.77 6.64 12.43Q7.43 12.1 8.3 12.1Q9.71 12.1 10.76 12.92Q11.8 13.73 12.02 15.14H11.66Q11.89 14.2 12.49 13.52Q13.09 12.84 13.96 12.46Q14.81 12.1 15.82 12.1Q17.02 12.1 17.95 12.61Q18.9 13.13 19.44 14.13Q19.98 15.11 19.98 16.53V24.73H16.54V17.16Q16.54 16.05 15.94 15.5Q15.33 14.95 14.44 14.95Q13.78 14.95 13.29 15.24Q12.8 15.53 12.54 16.06Q12.27 16.57 12.27 17.28V24.73H8.94V17.07Q8.94 16.11 8.37 15.52Q7.79 14.95 6.88 14.95Q6.27 14.95 5.77 15.24Q5.27 15.52 4.97 16.07Q4.68 16.63 4.68 17.43V24.73ZM25.72 24.94Q24.49 24.94 23.53 24.53Q22.57 24.12 22.02 23.3Q21.47 22.47 21.47 21.24Q21.47 20.2 21.86 19.49Q22.24 18.8 22.91 18.37Q23.59 17.95 24.46 17.72Q25.34 17.5 26.3 17.42Q27.44 17.3 28.1 17.2Q28.77 17.09 29.06 16.89Q29.36 16.69 29.36 16.29V16.21Q29.36 15.75 29.11 15.4Q28.87 15.06 28.42 14.86Q27.96 14.66 27.33 14.66Q26.7 14.66 26.21 14.86Q25.72 15.06 25.44 15.43Q25.16 15.79 25.12 16.27H21.87Q21.95 14.99 22.63 14.05Q23.3 13.12 24.52 12.61Q25.74 12.1 27.44 12.1Q28.7 12.1 29.7 12.39Q30.69 12.67 31.37 13.22Q32.06 13.77 32.42 14.56Q32.77 15.34 32.77 16.34V24.73H29.39V22.98H29.35Q29.02 23.59 28.54 24.03Q28.06 24.46 27.37 24.71Q26.67 24.94 25.72 24.94ZM26.69 22.54Q27.52 22.54 28.13 22.23Q28.72 21.93 29.05 21.4Q29.38 20.88 29.38 20.21V18.96Q29.23 19.05 28.98 19.12Q28.74 19.2 28.41 19.26Q28.08 19.33 27.69 19.4Q27.31 19.47 26.9 19.53Q26.3 19.62 25.82 19.81Q25.34 20.01 25.06 20.32Q24.78 20.65 24.78 21.14Q24.78 21.58 25.01 21.89Q25.24 22.21 25.68 22.38Q26.11 22.54 26.69 22.54ZM37.84 21.17V17.09H38.21L42.54 12.36H46.6L40.98 18.58H40.19ZM34.72 24.73V7.27H38.17V24.73ZM42.81 24.73 38.9 19.34 41.18 16.94 46.86 24.73ZM52.54 25.01Q50.67 25.01 49.27 24.18Q47.89 23.36 47.12 21.89Q46.35 20.43 46.35 18.55Q46.35 16.66 47.13 15.2Q47.91 13.74 49.28 12.91Q50.66 12.07 52.42 12.07Q53.8 12.07 54.91 12.54Q56.02 13 56.83 13.87Q57.64 14.72 58.08 15.89Q58.52 17.07 58.52 18.48V19.41H47.58V17.21H56.85L55.3 17.73Q55.3 16.8 54.96 16.12Q54.62 15.44 53.99 15.07Q53.36 14.7 52.49 14.7Q51.64 14.7 51.02 15.07Q50.4 15.44 50.06 16.12Q49.72 16.8 49.72 17.73V19.23Q49.72 20.2 50.06 20.91Q50.41 21.64 51.07 22.02Q51.72 22.42 52.65 22.42Q53.33 22.42 53.85 22.22Q54.37 22.04 54.73 21.67Q55.08 21.32 55.24 20.84H58.39Q58.17 22.07 57.35 23.01Q56.53 23.95 55.28 24.48Q54.04 25.01 52.54 25.01Z"/>
+        <path fill="#c41c83" d="M61.59 24.94Q60.77 24.94 60.18 24.36Q59.61 23.78 59.61 22.95Q59.61 22.12 60.18 21.54Q60.77 20.96 61.59 20.96Q62.42 20.96 63.01 21.54Q63.58 22.12 63.58 22.95Q63.58 23.78 63.01 24.36Q62.42 24.94 61.59 24.94Z"/>
+        <path fill="#ffffff" d="M72.47 12.36V15.06H64.25V12.36ZM66.49 24.73V10.75Q66.49 9.59 66.94 8.82Q67.39 8.04 68.28 7.66Q69.18 7.27 70.51 7.27Q71.13 7.27 71.69 7.27Q72.26 7.27 72.47 7.27V9.98Q72.33 9.98 71.94 9.98Q71.55 9.98 71.28 9.98Q70.56 9.98 70.24 10.29Q69.94 10.6 69.94 11.34V24.73ZM78.01 24.99Q76.7 24.99 75.73 24.43Q74.74 23.85 74.2 22.76Q73.67 21.66 73.67 20.1V12.36H77.12V19.47Q77.12 20.71 77.72 21.36Q78.32 22.01 79.4 22.01Q80.11 22.01 80.66 21.72Q81.2 21.43 81.52 20.8Q81.82 20.18 81.82 19.23V12.36H85.27V24.73H81.88V21.51H82.47Q81.88 23.15 80.79 24.07Q79.71 24.99 78.01 24.99ZM90.68 17.85V24.73H87.23V12.36H90.62V15.58H90.04Q90.62 13.94 91.71 13.01Q92.8 12.1 94.49 12.1Q95.82 12.1 96.79 12.66Q97.76 13.23 98.3 14.32Q98.83 15.41 98.83 16.98V24.73H95.38V17.62Q95.38 16.36 94.8 15.72Q94.2 15.07 93.11 15.07Q92.39 15.07 91.84 15.37Q91.29 15.66 90.99 16.28Q90.68 16.89 90.68 17.85Z"/>
+      </svg>
+      <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:0.1em;margin-left:4px;">// ARENA</span>
     </a>
     <div class="nav-status">
       <div class="pulse-mint"></div>
@@ -642,35 +669,65 @@
           </div>
         </div>
 
-        <!-- High-tech 3D Faceted Quantum Torus / Crystal Wireframe -->
+        <!-- Official 3D make.fun Logo Emblem -->
         <div class="visual-wrapper" aria-hidden="true">
-          <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="150" height="150" viewBox="0 0 280 280" fill="none" class="makefun-3d-logo">
             <defs>
-              <linearGradient id="qg1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient id="coinRim3D" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#3d0b28"/>
+                <stop offset="35%" stop-color="#730e49"/>
+                <stop offset="70%" stop-color="#2a071c"/>
+                <stop offset="100%" stop-color="#14030d"/>
+              </linearGradient>
+              <linearGradient id="coinFace3D" x1="15%" y1="10%" x2="85%" y2="90%">
+                <stop offset="0%" stop-color="#f4259b"/>
+                <stop offset="40%" stop-color="#c41c83"/>
+                <stop offset="85%" stop-color="#880f58"/>
+                <stop offset="100%" stop-color="#5a083a"/>
+              </linearGradient>
+              <linearGradient id="specularRim" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+                <stop offset="25%" stop-color="#ff85cb" stop-opacity="0.5"/>
+                <stop offset="60%" stop-color="#c41c83" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="ghost3D" x1="20%" y1="10%" x2="80%" y2="90%">
                 <stop offset="0%" stop-color="#ffffff"/>
-                <stop offset="40%" stop-color="#ba9fff"/>
-                <stop offset="80%" stop-color="#553a85"/>
-                <stop offset="100%" stop-color="#b8ffce"/>
+                <stop offset="55%" stop-color="#f8f4fb"/>
+                <stop offset="85%" stop-color="#e3d8ed"/>
+                <stop offset="100%" stop-color="#c8bad5"/>
               </linearGradient>
-              <linearGradient id="qg2" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#b8ffce" stop-opacity="0.8"/>
-                <stop offset="60%" stop-color="#ba9fff" stop-opacity="0.3"/>
-                <stop offset="100%" stop-color="#121020" stop-opacity="0.1"/>
+              <linearGradient id="starCoin" x1="10%" y1="10%" x2="90%" y2="90%">
+                <stop offset="0%" stop-color="#ff47b0"/>
+                <stop offset="70%" stop-color="#c41c83"/>
+                <stop offset="100%" stop-color="#700b48"/>
               </linearGradient>
+              <filter id="shadow3D" x="-20%" y="-20%" width="150%" height="150%">
+                <feDropShadow dx="8" dy="14" stdDeviation="10" flood-color="#000000" flood-opacity="0.75"/>
+                <feDropShadow dx="0" dy="4" stdDeviation="20" flood-color="#c41c83" flood-opacity="0.3"/>
+              </filter>
+              <filter id="ghostShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="4" dy="7" stdDeviation="4" flood-color="#3d0726" flood-opacity="0.6"/>
+              </filter>
             </defs>
-            <!-- 3D Polyhedral Ribbon Ribs -->
-            <path d="M30 60 C 30 20, 75 15, 100 40 C 125 65, 170 60, 170 60 C 170 100, 125 105, 100 80 C 75 55, 30 60, 30 60 Z" stroke="url(#qg1)" stroke-width="2.5" fill="none"/>
-            <path d="M42 60 C 42 30, 80 25, 100 45 C 120 65, 158 60, 158 60 C 158 90, 120 95, 100 75 C 80 55, 42 60, 42 60 Z" stroke="url(#qg2)" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
-            <polygon points="100,15 135,45 100,65 65,45" stroke="url(#qg1)" stroke-width="1.2" fill="rgba(186,159,255,0.06)"/>
-            <polygon points="100,65 135,85 100,105 65,85" stroke="url(#qg1)" stroke-width="1.2" fill="rgba(184,255,206,0.06)"/>
-            <!-- Vertices -->
-            <circle cx="100" cy="15" r="3" fill="#ffffff"/>
-            <circle cx="135" cy="45" r="3" fill="#ba9fff"/>
-            <circle cx="100" cy="65" r="3.5" fill="#b8ffce"/>
-            <circle cx="65" cy="45" r="3" fill="#ba9fff"/>
-            <circle cx="135" cy="85" r="3" fill="#b8ffce"/>
-            <circle cx="100" cy="105" r="3" fill="#ffffff"/>
-            <circle cx="65" cy="85" r="3" fill="#ba9fff"/>
+            <g filter="url(#shadow3D)">
+              <ellipse cx="148" cy="148" rx="100" ry="94" fill="#0d040a" stroke="#1f0614" stroke-width="3"/>
+              <ellipse cx="144" cy="144" rx="100" ry="94" fill="url(#coinRim3D)"/>
+              <ellipse cx="140" cy="140" rx="100" ry="94" fill="#140d16" stroke="#2b1122" stroke-width="2"/>
+              <ellipse cx="138" cy="138" rx="92" ry="86" fill="url(#coinFace3D)"/>
+              <ellipse cx="137" cy="137" rx="90" ry="84" fill="none" stroke="url(#specularRim)" stroke-width="2" opacity="0.65"/>
+            </g>
+            <g filter="url(#ghostShadow)" transform="translate(14, 12)">
+              <path d="M125 58 C92 58, 68 82, 68 116 C 68 135, 62 148, 52 154 C 44 159, 44 172, 54 178 C 64 184, 68 180, 72 174 C 74 186, 86 196, 102 196 C 114 196, 120 188, 125 188 C 130 188, 136 196, 148 196 C 164 196, 176 186, 178 174 C 182 180, 186 184, 196 178 C 206 172, 206 159, 198 154 C 188 148, 182 135, 182 116 C 182 82, 158 58, 125 58 Z" fill="#191419"/>
+              <path d="M125 64 C97 64, 76 85, 76 116 C 76 133, 70 144, 60 150 C 53 154, 53 164, 61 169 C 68 173, 72 170, 75 165 C 77 175, 88 188, 104 188 C 115 188, 120 182, 125 182 C 130 182, 135 188, 146 188 C 162 188, 173 175, 175 165 C 178 170, 182 173, 189 169 C 197 164, 197 154, 190 150 C 180 144, 174 133, 174 116 C 174 85, 153 64, 125 64 Z" fill="url(#ghost3D)"/>
+              <path d="M110 102 C110 94, 114 90, 122 90 C114 90, 110 86, 110 78 C110 86, 106 90, 98 90 C106 90, 110 94, 110 102 Z" fill="#191419"/>
+              <path d="M152 98 C152 91, 155 88, 162 88 C155 88, 152 85, 152 78 C152 85, 149 88, 142 88 C149 88, 152 91, 152 98 Z" fill="#191419"/>
+              <circle cx="184" cy="116" r="28" fill="#191419"/>
+              <circle cx="184" cy="116" r="23" fill="url(#starCoin)"/>
+              <circle cx="183" cy="115" r="22" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.45"/>
+              <polygon points="184,98 189,111 202,111 192,119 196,132 184,124 172,132 176,119 166,111 179,111" fill="#ffffff"/>
+              <circle cx="172" cy="144" r="14" fill="#191419"/>
+              <circle cx="172" cy="144" r="10" fill="url(#ghost3D)"/>
+            </g>
           </svg>
         </div>
 
